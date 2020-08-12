@@ -1,0 +1,65 @@
+[class*='listClass']{
+    width: 90%;
+    float: left;
+    clear: left;
+    color: cornflowerblue;
+    font-size: 30px;
+    margin: 2%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+span{
+    margin-right: 10%;
+    background-color: crimson;
+    color: bisque;
+    float: left;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+button{
+    float: left;
+    clear: left;
+}
+h2{
+    float: left;
+    clear: left;
+}
+app-heroes-details{
+    float: left;
+    clear: left;
+}
+[class*='formClass']{
+    display: flex;
+    width: 30%;
+    height: auto;
+    float: left;
+    clear: left;
+}
+[class*='forms']{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+[class*='btn1']{
+    width: 50%;
+    align-self: center;
+}
+[class*='btn12']{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-weight: bolder;
+    width: 1%;
+    margin-right: 50%;
+    background-color: yellowgreen;
+    color: white;
+}
+a{
+    width: 50%;
+}

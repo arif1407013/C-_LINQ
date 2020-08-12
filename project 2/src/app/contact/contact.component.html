@@ -1,0 +1,42 @@
+<form>
+    <div class="form-group">
+        <label for="name">User Name</label>
+        <input required ngModel #name="ngModel" minlength="4" pattern="^[a-zA-Z0-9_-]{0,100}$" name="name" id="name" type="text" class="form-control" (change)="rettro(name)"/>
+        <div class="alert alert-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
+            <div *ngIf="name.errors.required">username is required</div>
+            <div *ngIf="name.errors.minlength">username must be of 4 letters</div>
+            <div *ngIf="name.errors.pattern">username can't have spaces</div>
+        </div>
+        <label for="email">E-MAIL</label>
+        <input id="email" type="text" class="form-control" [formControl]="emailForm"/>
+    </div>
+    <div class="form-group">
+        <label for="comment">User Comment</label>
+        <textarea ngModel #comment="ngModel" name="comment" id="comment" rows="5" type="text" class="form-control"></textarea>
+    </div>
+    <button class="btn btn-primary" (click)="setEmail()">SUBMIT</button>
+</form>
+<form class="form-group" [formGroup]="formGroups" (ngSubmit)="showAddress()">
+    <label for="city">
+        City
+        <input id="city" class="form-control" type="text" formControlName="City">
+    </label>
+    <label for="country">
+        Country
+        <input id="country" class="form-control" type="text" formControlName="Country">
+    </label>
+    <div formGroupName="Authority">
+        <label for="mayor">
+            Mayor
+            <input id="mayor" class="form-control" type="text" formControlName="Mayor">
+        </label>
+        <label for="corp">
+            City Corporation
+            <input id="corp" class="form-control" type="text" formControlName="CityCorp">
+        </label>
+    </div>
+    <button type="submit" mat-raised-button color="accent">CLICK</button>
+</form>
+<div style="float: left; clear: both;">
+    {{formGroups.value.City}}
+</div>

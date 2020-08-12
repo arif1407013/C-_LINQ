@@ -1,0 +1,26 @@
+mat-grid-tile{
+    background-color: olive;
+    justify-self: stretch;
+    font-weight: bold;
+}
+mat-grid-list{
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 1%;
+}
+h2{
+    justify-self: center;
+}
+div{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+    margin: 2%;
+}
+button{
+    background-color:orangered;
+    align-self: flex-start;
+}

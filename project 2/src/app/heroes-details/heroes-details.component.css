@@ -1,0 +1,19 @@
+div{
+    float: left;
+    clear: both;
+    margin: 1%;
+    width: 70%;
+    margin-left: 15%;
+}
+mat-card{
+    background-color: pink;
+}
+[class*='butan']{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    float: left;
+    margin-right: 10px;
+}

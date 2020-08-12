@@ -1,0 +1,14 @@
+<div *ngIf='messageList.messages.length'>
+    <h2>
+        Messages
+    </h2>
+    <!--<div *ngFor='let mes of messageList.messages'>
+        {{mes}}
+    </div>-->
+    <mat-grid-list cols="2" rowHeight="40px">
+        <mat-grid-tile *ngFor='let mes of messageList.messages' [colspan]='2' [rowspan]='1'>
+            {{mes}}
+        </mat-grid-tile>
+    </mat-grid-list>
+    <button mat-button (click)='messageList.clrMsg()'>CLEAR</button>
+</div>

@@ -1,0 +1,36 @@
+<div *ngIf="selectedHeroD">
+    <mat-card>
+      <mat-card-header>
+        <h2>DETAILS ABOUT {{selectedHeroD.Name | uppercase}}</h2>
+      </mat-card-header>
+      <mat-card-content>
+        <p><Span>Id : </Span>{{selectedHeroD.Id}}</p>
+        <p><Span>Name : </Span>{{selectedHeroD.Name}}</p>
+        <p>
+            <mat-form-field appearance="outline" color="red">
+              <mat-label>Correct Hero Name</mat-label>
+              <input #heroDetailsNameInp matInput placeholder="Name" [(ngModel)]="tempSelectHeroD" (keyup.enter)="assigner()">
+              <mat-icon matSuffix></mat-icon>
+              <mat-hint>Hinted</mat-hint>
+            </mat-form-field>
+          </p>
+      </mat-card-content>
+      <mat-card-action>
+        <button class="butan" mat-fab color="primary" aria-label="Save Hero" (click)='saveHero()'>
+          <mat-icon>save</mat-icon>
+        </button>
+        <button class="butan" mat-fab color="accent" aria-label="Back to Hero List" (click)='goBack()'>
+          <mat-icon>back</mat-icon>
+        </button>
+        <button class="butan" mat-fab color="warn" aria-label="Delete Hero" (click)='deleteHero();'>
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-action>
+    </mat-card>
+</div>
+<!--
+    <h2>DETAILS ABOUT {{selectedHeroD.Name | uppercase}}</h2>
+    <p><Span>Id : </Span>{{selectedHeroD.Id}}</p>
+    <p><Span>Name : </Span>{{selectedHeroD.Name}}</p>
+    <input [(ngModel)]="tempSelectHeroD" (keyup.enter)="assigner()" placeholder="Name"/>
+-->

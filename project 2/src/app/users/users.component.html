@@ -1,0 +1,11 @@
+<div class="1stclass">
+    <p>username = {{getName()}}</p>
+    <p>city = {{getCity()}}</p>
+    <p>company = {{getCompany()}}</p>
+    <button class="btn-primary" (click)="getId(0)">BACK</button>
+    <button class="btn-primary" (click)="getId(1)">FRONT</button>
+</div>
+<div class="2ndclass">
+    <input [(ngModel)]="_Valued" (keyup.enter)="changer()"/>
+    <p style="font-weight: bolder;color: teal;">{{_Tempo}}</p>
+</div>

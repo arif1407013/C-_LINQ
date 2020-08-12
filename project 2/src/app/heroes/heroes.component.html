@@ -1,0 +1,23 @@
+<h2>List of Heroes</h2>
+<div class="formClass">
+    <form class="forms">
+        <mat-form-field appearance="fill">
+            <mat-label>Input Id</mat-label>
+            <input matInput name='heroId' [(ngModel)]='newHId'>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Input Name</mat-label>
+            <input matInput name='heroName' [(ngModel)]='newHName'>
+        </mat-form-field>
+        <button class="btn1" mat-raised-button (click)='showHero()'>Add Hero</button>
+    </form>
+</div>
+<div class="listClass" *ngFor="let tem of tempHero; let i=index">
+    <a routerLink="/detail/{{tem.Id}}">
+        <span>{{tem.Id}}</span>
+        {{tem.Name}}
+    </a>
+    <button class="btn12" mat-flat-button (click)='delHero(tem)'>X</button>
+    <!--<mat-raised-button class="btn btn-primary" (click)="selectHero(i)">select</mat-raised-button>-->
+</div>
+<!--<app-heroes-details [selectedHeroD]="selectedHero"></app-heroes-details>-->

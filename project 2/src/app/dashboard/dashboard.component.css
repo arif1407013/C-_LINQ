@@ -1,0 +1,24 @@
+[class*='flexer']{
+    float: left;
+    clear: both;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    margin: 2%;
+}
+
+[class*='per']{
+    color: bisque;
+    background-color: saddlebrown;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 1%;
+}
+
+h3{
+    float: left;
+    clear: both;
+}

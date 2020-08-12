@@ -1,0 +1,9 @@
+<h3>
+    TOP HEROES
+</h3>
+<div class="flexer">
+    <a class="per" *ngFor='let her of tempHero; let i=index' routerLink="/detail/{{her.Id}}">
+        <span>{{i+1}}</span>
+        {{her.Name}}
+    </a>
+</div>
